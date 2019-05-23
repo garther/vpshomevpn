@@ -4,12 +4,7 @@ As not all ISPs are granting public IP to their customers, publishing services o
 > **For security reasons**, the VPN server will be running on the edge home router. By doing this, the VPS will have no access to your home network so if compromised, there will be no harm to privacy of your data hosted there.
 
 ## Diagram
-```mermaid
-graph LR
-A((End User)) --> B[VPS]
-B -- "(l2tp tunnel)" --> C[Home Router]
-C --> D{Home Network}
-```
+
 Above diagram shows how traffic will be passing in the configuration we are about to make.
 - End user connects to VPS server public IP
 - VPS using firewall NAT rules, forwards traffic to home router IP
